@@ -45,8 +45,13 @@ async function promptUser() {
 function writeToFile(fileName, data) {
 }
 
-function init() {
-    
+async function init() {
+    try {
+        const answers = await promptUser();
+        console.log(answers)
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 init();
