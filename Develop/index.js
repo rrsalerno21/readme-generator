@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown');
+const util = require('util');
+const fs = require('fs');
 
 const questions = [
     {
@@ -44,6 +46,7 @@ async function promptUser() {
 }
 
 function writeToFile(fileName, data) {
+
 }
 
 async function init() {
