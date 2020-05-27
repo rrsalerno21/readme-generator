@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown')
 
 const questions = [
     {
@@ -49,6 +50,7 @@ async function init() {
     try {
         const answers = await promptUser();
         console.log(answers)
+        const markdown = generateMarkdown(answers);
     } catch (error) {
         console.log(error)
     }
