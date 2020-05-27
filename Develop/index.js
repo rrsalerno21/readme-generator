@@ -29,13 +29,24 @@ const questions = [
     }
 ];
 
+async function promptUser() {
+    try {
+        const answers = await inquirer
+        .prompt(questions);
 
+        console.log('Success');
+        return answers
+    }
+    catch(err) {
+        console.log(err);
+    }
+}
 
 function writeToFile(fileName, data) {
 }
 
 function init() {
-
+    
 }
 
 init();
