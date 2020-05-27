@@ -1,4 +1,12 @@
+const axios = require('axios');
+
 function generateMarkdown(data) {
+  let email;
+  axios
+    .get(`https://api.github.com/users/${data.title}`)
+    .then(function(res) {
+      email = res.email;
+    })
   return `
 # ${data.title}
 
@@ -54,7 +62,10 @@ Go the extra mile and write tests for your application. Then provide examples on
 
 ##  Questions
 
-Put your questions here.
+Feel free to contact me!
+
+[![My Profile Photo](https://github.com/rrsalerno21.png)](https://github.com/rrsalerno21)
+My email: ${email}
 
 `;
 }
