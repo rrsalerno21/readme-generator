@@ -3,6 +3,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const util = require('util');
 const fs = require('fs');
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
 const questions = [
     {
         type: 'input',
