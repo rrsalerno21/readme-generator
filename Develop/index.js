@@ -34,7 +34,19 @@ const questions = [
         type: 'list',
         name: 'license',
         message: "Which license would you like to use?",
-        choices: ['MIT', 'Apache', 'GNU', 'ISC']
+        choices: ['MIT', 'Apache', 'GNU', 'ISC', 'none']
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        default: `Provide instructions and examples for use. Include screenshots as needed.`,
+        message: "What does the user need to know about using the repo?"
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        default: `If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.`,
+        message: "What does the user need to know about contributing to the repo?"
     }
 ];
 
