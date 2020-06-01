@@ -58,10 +58,6 @@ async function promptUser() {
     }
 }
 
-function writeToFile(fileName, data) {
-
-}
-
 async function init() {
     try {
         const answers = await promptUser();
