@@ -3,17 +3,25 @@ const axios = require('axios');
 async function generateMarkdown(data) {
   try {
     var userEmail;
+    var licenseOption;
+
     const gitHubGet = await axios.get(`https://api.github.com/users/${data.username}`)
     if (gitHubGet.email === null || gitHubGet.email === undefined) {
       userEmail = '';
     } else {
       userEmail = `My Email: ${gitHubGet.email}`;
     };
+
+    if (data.license === 'none') {
+      licenseOption = ''
+    } else {
+      licenseOption = `![GitHub License](https://img.shields.io/github/license/${data.username}/${data.repo})`
+    }
  
     return `# ${data.title}
 
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/${data.username}/${data.repo})
-![GitHub License](https://img.shields.io/github/license/${data.username}/${data.repo})
+${licenseOption}
 
 ## Description 
 
@@ -36,8 +44,7 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
-
+${data.usage}
 
 ## Credits
 
@@ -56,7 +63,7 @@ ${data.license}
 
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
+${data.contribution}
 
 ## Tests
 
