@@ -5,36 +5,29 @@
 
 ## Description 
 
-Command-line app that dynamically generates a README.md from a user's input.  The app is invoked with the following command: node index.js
+Command-line app that dynamically generates a README.md from a user's input.  Utilizes Node.js, inquirer and util npm packages.  Video demonstration of app ![here](https://drive.google.com/file/d/1kOjGRt6fEFYJlwuHSFx2oRAZHl8aFcNF/view?usp=sharing)
 
 ## Table of Contents
 
-* [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
-* [Tests](#tests)
 * [Questions](#questions)
-
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
+The app is invoked with the following command: 
 
+```sh
+node index.js
+```
+
+You'll be asked a series of questions related to your project and GitHub information.  Once the questions are completed, you'll be prompted with a success message.  Navigate to your newly generated README.md file and fill in any remaining details and information.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
+Credit to inquirer and util npm packages.
 
 
 ## License
@@ -44,11 +37,7 @@ MIT
 
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
+Feel free to contribute and utilize as you wish.  Under the MIT License.
 
 ##  Questions
 
